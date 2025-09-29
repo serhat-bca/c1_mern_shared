@@ -5,11 +5,14 @@ const App = () => {
   const [counter, setCounter] = useState(0);
 
   const increment = () => {
-    console.log("Counter: ", counter);
+    console.log("Counter before increment: ", counter);
     // counter++;
     // never mutate the state directly
     // always use set method.
     setCounter(counter + 1);
+    console.log("Counter after increment: ", counter);
+    // set method make a request 
+    // the state value is being updated after rendering
   };
 
   const decrement = () => setCounter(counter - 1);
