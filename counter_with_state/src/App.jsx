@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+const Counter = (props) => {
+  return <div>Counter: {props.counter}</div>;
+};
+
 const App = () => {
   // let counter = 0;
   const [counter, setCounter] = useState(0);
@@ -27,7 +31,7 @@ const App = () => {
   return (
     <div>
       <h3>Counter with React State</h3>
-      <p>Counter: {counter}</p>
+      <Counter counter={counter} />
       <button onClick={increment}>+</button>
       <button onClick={decrement}>-</button>
       <button onClick={() => setCounter(0)}>reset</button>
