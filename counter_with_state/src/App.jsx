@@ -11,7 +11,7 @@ const App = () => {
     // always use set method.
     setCounter(counter + 1);
     console.log("Counter after increment: ", counter);
-    // set method make a request 
+    // set method make a request
     // the state value is being updated after rendering
   };
 
