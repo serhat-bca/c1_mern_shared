@@ -9,13 +9,20 @@ const App = () => {
     // counter++;
     // never mutate the state directly
     // always use set method.
-    setCounter(counter + 1);
+    //setCounter(counter + 1);
+    setCounter((prev) => prev + 1);
     console.log("Counter after increment: ", counter);
+    //setCounter(counter + 1);
+    setCounter((prev) => {
+      return prev + 1;
+    });
     // set method make a request
     // the state value is being updated after rendering
   };
 
   const decrement = () => setCounter(counter - 1);
+
+  const justClick = () => console.log("Hello");
 
   return (
     <div>
@@ -24,6 +31,7 @@ const App = () => {
       <button onClick={increment}>+</button>
       <button onClick={decrement}>-</button>
       <button onClick={() => setCounter(0)}>reset</button>
+      {/* <button onClick={justClick()}>Just Click on Me</button> */}
       {/* minus button and a method for it */}
       {/* +5 button and a method for it */}
       {/* -5 button and a method for it */}
