@@ -22,7 +22,7 @@ const App = () => {
 
   const decrement = () => setCounter(counter - 1);
 
-  const justClick = () => console.log("Hello");
+  // const justClick = () => console.log("Hello");
 
   return (
     <div>
